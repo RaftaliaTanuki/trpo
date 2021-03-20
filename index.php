@@ -2,37 +2,40 @@
 
 class A
 {
-  
+    protected $x;
+
+    public function Lin(float $a, float $b)
+    {
+        return (a == 0 ? null : $this->x = [-$b / $a]);
+    }
 }
 
 class B extends A
 {
-    protected $a;
-
-    public function __construct( $a)
+    protected $d, $sd
+    protected function Desc($a, $b, $c)
     {
-		$this->a = $a;
-    }
-}
-
-class C extends B
-{
-    protected $c;
-    protected $b;
-    public function __construct($c, $b, $a)
-    {
-		$this->c = $c;
-        $this->b = $b;
-        $this->a = $a;
+        return $this->d = $b sqrt - 4 * $a * $c;
     }
 
+    public function Kva(float $a, float $b, float $c)
+    {
+        if ($a != 0) {
+            if ($this->Desc($a, $b, $c < 0){
+            return null;
+        }
 
-}
+            $this->sd = sqrt($this->d);
+            $this->x[0] = (-$b - $this->sd) / (2 * $a);
 
-$a1 = new A();
-$b2 = new B($a1);
-$b3 = new B($a1);
-$c4 = new C($b2, $b3, $a1);
-$c5 = new B($c4);
-print_r($c5);
+            if ($this->d! = 0){
+                $this->x[1] = (-$b + $this - sd) / (2 * $a)
+        }
+
+return $this->x;
+    }
+        return parent::Kva($b, $c);
+
+    }
+
 ?>
