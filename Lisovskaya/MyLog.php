@@ -20,10 +20,15 @@ Class MyLog extends LogAbstract implements LogInterface {
     public function _write()
     {
 
-        foreach($this->log as $value)
-        {
-            echo $value."\n";
+        $log_str='';
+        foreach($this->log as $v){
+            $log_str.= "{$v}\r\n";
         }
+        if(!file_exists("log")){
+            mkdir("log");
+        }
+        file_put_contents("log\\".date('d-m-Y\TH.i.s.u').'.log',rtrim($log_str));
+        echo $log_str;
 
     }
 
