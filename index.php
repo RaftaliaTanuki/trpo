@@ -4,20 +4,14 @@ use Lisovskaya\MyLog;
 use Lisovskaya\LisovskayaException;
 use Lisovskaya\QvaEquation;
 
-include "core/EquationInterface.php";
-include "core/LogAbstract.php";
-include "core/LogInterface.php";
-include "Lisovskaya/MyLog.php";
-include "Lisovskaya/Equation.php";
-include "Lisovskaya/QvaEquation.php";
-include "Lisovskaya/LisovskayaException.php";
-
 ini_set("display_errors", 1);
 error_reporting(-1);
 
+require_once("vendor/autoload.php");
+
 try {
 
-    MyLog::log('Program version: '.file_get_contents('version'));
+    MyLog::log('Program version: '.file_get_contents(__DIR__.'/version'));
     $values = array();
 
     for ($i = 1; $i < 4; $i++) {

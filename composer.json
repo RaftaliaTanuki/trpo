@@ -1,0 +1,34 @@
+{
+    "name": "raftaliatanuki/trpo",     
+    "description": "labs lib for trpo", 
+    "type": "library",
+	"license": "MIT",
+	"minimum-stability":"dev",
+    "authors": [
+        {
+            "name": "raftaliatanuki", 
+            "email": "Raftalia.Tanuki@yandex.ru" 
+        }
+    ],
+    "repositories":[
+		{
+			"type":"vcs",
+            "url":"https://github.com/RaftaliaTanuki/Lisovskaya.git"
+        },
+        {
+            "type":"vcs",
+            "url":"https://github.com/rok9ru/trpo-core.git" 
+        }
+    ],
+	"require": {
+		"raftaliatanuki/lisovskaya": "2.0"       
+	  },
+    "scripts": {
+		"post-update-cmd": [
+			"git symbolic-ref --short -q HEAD>version"  
+		],
+		"post-install-cmd": [
+			"git symbolic-ref --short -q HEAD>version"
+		]
+	}
+}

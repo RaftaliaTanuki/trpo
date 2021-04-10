@@ -2,3 +2,6 @@
 start.bat
 log
 version
+repush.bat
+composer.phar
+vendor
